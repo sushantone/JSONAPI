@@ -1,0 +1,16 @@
+[
+{
+	"Id":"aa",
+	"Label": "Node",
+	"Name":"nn",
+	"AltName":[],
+	"AltIds":[]
+},
+{
+	"Id":"ab",
+	"Label": "User",
+	"Name":"nn",
+	"Key":"ffff",
+	"Phrase":"pp"
+}
+]
