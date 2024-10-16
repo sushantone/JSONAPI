@@ -68,7 +68,7 @@ namespace JsonApi.Entities
                 && match(entity);
 
             if (pred != null)
-                return entityStore.FindAll(pred).Cast<TEntity>();
+                return await Task.Run(() => entityStore.FindAll(pred).Cast<TEntity>());
             return [];
         }
 

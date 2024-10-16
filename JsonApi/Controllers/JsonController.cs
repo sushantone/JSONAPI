@@ -12,7 +12,7 @@ namespace JsonApi.Controllers
         {
             var entityService = new EntityService();
             var user = (await entityService
-                .FindByProps((User user) => user.Id == email && user.Phrase == phrase))
+                .FindByProps<User>(user => user.Id == email && user.Phrase == phrase))
                 .FirstOrDefault();
                 
             if (user != null)
