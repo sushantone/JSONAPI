@@ -1,0 +1,51 @@
+<html>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        height: 300vh;
+    }
+    .block {
+        height: 100vh;
+        /* Static full‑screen sections */
+        display: flex;
+        --position: fixed;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        
+        /* Start invisible */
+        transform: translateX(-250px);
+        border:2px solid red;
+        /* Slightly shifted down */
+
+        /* Scroll animation */
+        animation: fadeInUp 1s linear forwards;
+        animation-timeline: view();
+        /* Tie animation to viewport scroll */
+        animation-range: 00% 100%;
+        /* Animate as element enters */
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateX(-250px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+</style>
+
+<body>
+    <section class="block">First Section</section>
+    <section class="block">Second Section</section>
+    <section class="block">Third Section</section>
+
+</body>
+
+</html>

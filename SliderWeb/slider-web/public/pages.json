@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "name": "Page 1",
+        "description": "Description 1",
+        "image": "image1.jpg",
+        "createdAt": "2021-01-01",
+        "updatedAt": "2021-01-01",
+        "background":"#00A5E3"
+    },
+    {
+        "id": 2,
+        "name": "Page 2",
+        "description": "Description 2",
+        "image": "image2.jpg",
+        "createdAt": "2021-01-02",
+        "updatedAt": "2021-01-02",
+        "background":"#FC6238"
+    },
+    {
+        "id": 3,
+        "name": "Page 3",
+        "description": "Description 3",
+        "image": "image3.jpg",
+        "createdAt": "2021-01-03",
+        "updatedAt": "2021-01-03",
+        "background":"#FFB565"
+    },
+    {
+        "id": 4,
+        "name": "Page 4",
+        "description": "Description 4",
+        "image": "image4.jpg",
+        "createdAt": "2021-01-04",
+        "updatedAt": "2021-01-04",
+        "background":"#000B00BA"
+    },
+    {
+        "id": 5,
+        "name": "Page 5",
+        "description": "Description 5",
+        "image": "image5.jpg",
+        "createdAt": "2021-01-05",
+        "updatedAt": "2021-01-05",
+        "background":"#FFA23A"
+    }
+]
