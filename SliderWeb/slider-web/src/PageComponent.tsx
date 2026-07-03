@@ -1,6 +1,13 @@
-function PageComponent({ page, index, pages }: { page: any, index: number, pages: any[] }) {
+function PageComponent({ page, index, pages, translateX }: { page: any, index: number, pages: any[], translateX: number }) {
     return (
-        <div key={page.id} className="page" style={{ zIndex: `${1000 - (index * 100)}` }}>
+        <div
+            key={page.id}
+            className="page"
+            style={{
+                zIndex: `${1000 - (index * 100)}`,
+                transform: `translateX(${translateX}%)`,
+            }}
+        >
             <div className="page-content"
                 style={{ backgroundColor: page.background }}>
                 <h1>{page.name}</h1>
