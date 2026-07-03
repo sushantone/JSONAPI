@@ -47,13 +47,13 @@ code {
 }
 
 .page-nav-hole{
-  width: 5vh;
-  height: 5vh;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   box-sizing: content-box;
   border: 50px solid transparent;
   background-color: transparent;
-  transform: translate(-5vh, -5vh) scale(1.5);
+  transform: translate(-2rem, -2rem) scale(1.5);
   box-shadow: inset 0 0 10px 100px rgba(0, 0, 0, 0.1);
   
 }
@@ -65,14 +65,14 @@ code {
 
 .page-nav-right {
   position: relative;
-  height: 11vh;
-  width: 11vh;
+  height: 6rem;
+  width: 7rem;
   overflow: visible;
 }
 
 .page-nav-hole-wrap {
-  height: 11vh;
-  width: 11vh;
+  height: 6rem;
+  width: 7rem;
   overflow: hidden;
 }
 
@@ -80,10 +80,10 @@ code {
   display: none;
   position: absolute;
   right: 0;
-  bottom: 3.0vh;
-  right: 3.00vh;
+  bottom: 1.8rem;
+  right: 2.5rem;
   min-width: 12rem;
-  padding: 1vh;
+  padding: 0vh;
   background: rgba(224, 223, 223, 0.97);
   border-radius: 8vh;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
@@ -99,7 +99,7 @@ code {
 
 .page-nav-popup-item {
   display: block;
-  margin: 1vh;
+  margin: 1.2rem;
   color: #222;
   display: flex;
   align-items: center;
@@ -108,7 +108,7 @@ code {
   min-width: 10vh;
   min-height: 4vh;
   border-radius: 5vh;
-  font-size: 0.95rem;
+  font-size: 1rem;
   border-left: 4px solid transparent;
   transition: background-color 0.15s ease;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);

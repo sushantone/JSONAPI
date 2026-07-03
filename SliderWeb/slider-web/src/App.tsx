@@ -21,8 +21,8 @@ function App() {
 
   return (
     <div className="App">
-      {[...pages].reverse().map((page, index) => (
-        <PageComponent key={page.id} page={page} index={pages.length - index - 1} pages={pages} />
+      {[...pages].map((page, index) => (
+        <PageComponent key={page.id} page={page} index={ index } pages={pages} />
       ))}
     </div>
   );
