@@ -130,6 +130,30 @@ function App() {
     return -clamped * 100;
   }, [scrollTop, viewportHeight]);
 
+  const getHoleMarginLeft = useCallback((index: number) => {
+    if (!viewportHeight || pages.length === 0) {
+      return 0;
+    }
+
+    const maxMargin = index * 1;
+    const activeIndex = Math.floor(scrollTop / viewportHeight);
+    const progressInSection = (scrollTop % viewportHeight) / viewportHeight;
+    const fullyInViewIndex = Math.min(
+      pages.length - 1,
+      progressInSection === 0 ? activeIndex : activeIndex + 1
+    );
+
+    if (index === fullyInViewIndex) {
+      return 0;
+    }
+
+    if (index === activeIndex && progressInSection > 0) {
+      return maxMargin * progressInSection;
+    }
+
+    return maxMargin;
+  }, [scrollTop, viewportHeight, pages.length]);
+
   return (
     <>
       <div
@@ -149,6 +173,7 @@ function App() {
               index={index}
               pages={pages}
               translateX={getTranslateX(index)}
+              holeMarginLeft={getHoleMarginLeft(index)}
             />
           ))}
         </div>

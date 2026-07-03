@@ -91,8 +91,8 @@ code {
   border: 50px solid transparent;
   background-color: transparent;
   transform: translate(-2rem, -2rem) scale(1.5);
-  box-shadow: inset 0 0 10px 100px rgba(0, 0, 0, 0.1);
-  
+  box-shadow: inset 3px 0px 3px 3px rgba(0, 0, 0, 00.3);
+  transition: margin-left 0.2s ease;
 }
 
 .page-nav-left {

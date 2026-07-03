@@ -1,4 +1,4 @@
-function PageComponent({ page, index, pages, translateX }: { page: any, index: number, pages: any[], translateX: number }) {
+function PageComponent({ page, index, pages, translateX, holeMarginLeft }: { page: any, index: number, pages: any[], translateX: number, holeMarginLeft: number }) {
     return (
         <div
             key={page.id}
@@ -17,7 +17,10 @@ function PageComponent({ page, index, pages, translateX }: { page: any, index: n
                 <div className="page-nav-left" style={{ backgroundColor: page.background }}></div>
                 <div className="page-nav-right">
                     <div className="page-nav-hole-wrap">
-                        <div className="page-nav-hole" style={{ borderColor: page.background, marginLeft: `${index*1}vh` }}></div>
+                        <div
+                            className="page-nav-hole"
+                            style={{ borderColor: page.background, marginLeft: `${holeMarginLeft}vh` }}
+                        ></div>
                     </div>
                     <nav className="page-nav-popup">
                         {pages.map((item) => (
