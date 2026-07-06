@@ -117,7 +117,7 @@ code {
 
 .page-nav-popup {
   display: flex;
-  position: absolute;
+  position: fixed;
   right: 2.5rem;
   bottom: 0.9rem;
   min-width: 12rem;
@@ -125,13 +125,13 @@ code {
   background: transparent;
   border-radius: 8vh;
   flex-direction: row;
-  z-index: 10000;
+  z-index: 25000;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
 
-.page-nav-right:hover .page-nav-popup {
+.page-nav-popup--visible {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -162,7 +162,7 @@ code {
     opacity 0.3s ease;
 }
 
-.page-nav-right:hover .page-nav-popup-item {
+.page-nav-popup--visible .page-nav-popup-item {
   min-width: var(--item-min-width);
   width: var(--item-min-width);
   padding-left: 1.2rem;

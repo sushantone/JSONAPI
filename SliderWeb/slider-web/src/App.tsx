@@ -8,6 +8,7 @@ function App() {
   const [pages, setPages] = useState<any[]>([]);
   const [scrollTop, setScrollTop] = useState(0);
   const [viewportHeight, setViewportHeight] = useState(() => window.innerHeight);
+  const [navHovered, setNavHovered] = useState(false);
   const appRef = useRef<HTMLDivElement>(null);
   const dragStartRef = useRef({ y: 0, scrollTop: 0 });
 
@@ -154,6 +155,21 @@ function App() {
     return maxMargin;
   }, [scrollTop, viewportHeight, pages.length]);
 
+  const getFullyInViewIndex = useCallback(() => {
+    if (!viewportHeight || pages.length === 0) {
+      return 0;
+    }
+
+    const activeIndex = Math.floor(scrollTop / viewportHeight);
+    const progressInSection = (scrollTop % viewportHeight) / viewportHeight;
+    return Math.min(
+      pages.length - 1,
+      progressInSection === 0 ? activeIndex : activeIndex + 1
+    );
+  }, [scrollTop, viewportHeight, pages.length]);
+
+  const activePageId = pages[getFullyInViewIndex()]?.id;
+
   return (
     <>
       <div
@@ -171,13 +187,37 @@ function App() {
               key={page.id}
               page={page}
               index={index}
-              pages={pages}
               translateX={getTranslateX(index)}
               holeMarginLeft={getHoleMarginLeft(index)}
+              onNavEnter={() => setNavHovered(true)}
+              onNavLeave={() => setNavHovered(false)}
             />
           ))}
         </div>
       </div>
+
+      {pages.length > 0 && (
+        <nav
+          className={`page-nav-popup${navHovered ? ' page-nav-popup--visible' : ''}`}
+          onMouseEnter={() => setNavHovered(true)}
+          onMouseLeave={() => setNavHovered(false)}
+        >
+          {pages.map((item, itemIndex) => (
+            <a
+              key={item.id}
+              href={`#page-${item.id}`}
+              className={item.id === activePageId ? 'page-nav-popup-item active' : 'page-nav-popup-item'}
+              style={{
+                backgroundColor: item.background,
+                ['--item-min-width' as string]: `${(pages.length - itemIndex) * 15}vh`,
+                transitionDelay: `${itemIndex * 0.06}s`,
+              }}
+            >
+              {item.name}
+            </a>
+          ))}
+        </nav>
+      )}
 
       {pages.length > 1 && (
         <div className="App-scrollbar" aria-hidden="true">

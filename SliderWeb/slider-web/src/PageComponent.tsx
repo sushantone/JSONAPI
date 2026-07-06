@@ -1,48 +1,49 @@
-function PageComponent({ page, index, pages, translateX, holeMarginLeft }: { page: any, index: number, pages: any[], translateX: number, holeMarginLeft: number }) {
-    return (
-        <div
-            key={page.id}
-            className="page"
-            style={{
-                zIndex: `${1000 - (index * 100)}`,
-                transform: `translateX(${translateX}%)`,
-            }}
-        >
-            <div className="page-content"
-                style={{ backgroundColor: page.background }}>
-                <h1>{page.name}</h1>
-                <p>{page.description}</p>
-            </div>
-            <div className="page-nav">
-                <div className="page-nav-left" style={{ backgroundColor: page.background }}></div>
-                <div className="page-nav-right">
-                    <div className="page-nav-hole-wrap">
-                        <div
-                            className="page-nav-hole"
-                            style={{ borderColor: page.background, marginLeft: `${holeMarginLeft}vh` }}
-                        ></div>
-                    </div>
-                    <nav className="page-nav-popup">
-                        {pages.map((item, itemIndex) => (
-                            <a
-                                key={item.id}
-                                href={`#page-${item.id}`}
-                                className={item.id === page.id ?
-                                    'page-nav-popup-item active' : 'page-nav-popup-item'}
-                                style={{
-                                    backgroundColor: item.background,
-                                    ['--item-min-width' as string]: `${(pages.length - itemIndex) * 15}vh`,
-                                    transitionDelay: `${itemIndex * 0.06}s`,
-                                }}
-                            >
-                                {item.name}
-                            </a>
-                        ))}
-                    </nav>
-                </div>
-            </div>
-        </div>
-    )
-}
-
-export default PageComponent;
+function PageComponent({
+    page,
+    index,
+    translateX,
+    holeMarginLeft,
+    onNavEnter,
+    onNavLeave,
+}: {
+    page: any;
+    index: number;
+    translateX: number;
+    holeMarginLeft: number;
+    onNavEnter: () => void;
+    onNavLeave: () => void;
+}) {
+    return (
+        <div
+            key={page.id}
+            className="page"
+            style={{
+                zIndex: `${1000 - (index * 100)}`,
+                transform: `translateX(${translateX}%)`,
+            }}
+        >
+            <div className="page-content"
+                style={{ backgroundColor: page.background }}>
+                <h1>{page.name}</h1>
+                <p>{page.description}</p>
+            </div>
+            <div className="page-nav">
+                <div className="page-nav-left" style={{ backgroundColor: page.background }}></div>
+                <div
+                    className="page-nav-right"
+                    onMouseEnter={onNavEnter}
+                    onMouseLeave={onNavLeave}
+                >
+                    <div className="page-nav-hole-wrap">
+                        <div
+                            className="page-nav-hole"
+                            style={{ borderColor: page.background, marginLeft: `${holeMarginLeft}vh` }}
+                        ></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+export default PageComponent;
