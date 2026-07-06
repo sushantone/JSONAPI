@@ -152,14 +152,18 @@ code {
   padding-left: 0;
   border-radius: 5vh;
   font-size: 1rem;
+  box-sizing: content-box;
   overflow: hidden;
   white-space: nowrap;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
   transition:
     min-width 0.4s ease,
     width 0.4s ease,
-    padding-left 0.4s ease,
-    opacity 0.3s ease;
+    padding 0.4s ease,
+    opacity 0.3s ease,
+    box-shadow 0.4s ease,
+    font-size 0.4s ease,
+    font-weight 0.4s ease,
 }
 
 .page-nav-popup--visible .page-nav-popup-item {
@@ -170,11 +174,16 @@ code {
 
 .page-nav-popup-item:hover {
   background-color: rgba(0, 0, 0, 0.06);
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
 }
 
 .page-nav-popup-item.active {
   font-weight: 600;
   background-color: rgba(0, 0, 0, 0.08);
+  box-shadow: none;
+  font-size: 1.2rem;
+  
 }
 
 .App-scrollbar {
