@@ -23,12 +23,17 @@ function PageComponent({ page, index, pages, translateX, holeMarginLeft }: { pag
                         ></div>
                     </div>
                     <nav className="page-nav-popup">
-                        {pages.map((item) => (
+                        {pages.map((item, itemIndex) => (
                             <a
                                 key={item.id}
                                 href={`#page-${item.id}`}
-                                className={item.id === page.id ? 'page-nav-popup-item active' : 'page-nav-popup-item'}
-                                style={{ borderLeftColor: item.background }}
+                                className={item.id === page.id ?
+                                    'page-nav-popup-item active' : 'page-nav-popup-item'}
+                                style={{
+                                    backgroundColor: item.background,
+                                    ['--item-min-width' as string]: `${(pages.length - itemIndex) * 15}vh`,
+                                    transitionDelay: `${itemIndex * 0.06}s`,
+                                }}
                             >
                                 {item.name}
                             </a>
@@ -37,7 +42,7 @@ function PageComponent({ page, index, pages, translateX, holeMarginLeft }: { pag
                 </div>
             </div>
         </div>
-    );
+    )
 }
 
 export default PageComponent;
