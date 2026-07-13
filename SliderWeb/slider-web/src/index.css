@@ -86,15 +86,48 @@ code {
 }
 
 .page-nav-hole {
+  position: absolute;
+  right: 5vh;
+  bottom: -3.5vh;
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
   box-sizing: content-box;
   border: 50px solid transparent;
   background-color: transparent;
-  transform: translate(-2rem, -2rem) scale(1.5);
-  box-shadow: inset 3px 0px 3px 3px rgba(0, 0, 0, 00.3);
-  transition: margin-left 0.2s ease;
+  transform: translate(2rem, -1rem) scale(1.5);
+  transform-origin: right center;
+  box-shadow: inset 3px 0px 3px 3px rgba(0, 0, 0, 0.3);
+  transition:
+    right 0.4s ease,
+    width 0.4s ease,
+    min-width 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.page-nav-hole-wrap {
+  position: relative;
+  height: 6rem;
+  width: 7rem;
+  margin-left: auto;
+  overflow: hidden;
+  transition: width 0.4s ease, overflow 0s;
+}
+
+.App-pages--nav-hover .page-nav-hole-wrap {
+  overflow: visible;
+  width: auto;
+  min-width: 7rem;
+}
+
+.App-pages--nav-hover .page-nav-hole {
+  right: 0;
+  width: var(--hole-expanded-width);
+  min-width: var(--hole-expanded-width);
+}
+
+.page-nav-hole.active {
+  box-shadow: none;
 }
 
 .page-nav-left {
@@ -106,13 +139,9 @@ code {
   position: relative;
   height: 6rem;
   width: 7rem;
+  display: flex;
+  justify-content: flex-end;
   overflow: visible;
-}
-
-.page-nav-hole-wrap {
-  height: 6rem;
-  width: 7rem;
-  overflow: hidden;
 }
 
 .page-nav-popup {
@@ -163,7 +192,7 @@ code {
     opacity 0.3s ease,
     box-shadow 0.4s ease,
     font-size 0.4s ease,
-    font-weight 0.4s ease,
+    font-weight 0.4s ease;
 }
 
 .page-nav-popup--visible .page-nav-popup-item {

@@ -136,7 +136,7 @@ function App() {
       return 0;
     }
 
-    const maxMargin = index * 1;
+    const maxMargin = index * -2;
     const activeIndex = Math.floor(scrollTop / viewportHeight);
     const progressInSection = (scrollTop % viewportHeight) / viewportHeight;
     const fullyInViewIndex = Math.min(
@@ -181,14 +181,17 @@ function App() {
           style={{ height: pages.length ? `${pages.length * 100}vh` : '100vh' }}
           aria-hidden="true"
         />
-        <div className="App-pages">
+        <div className={`App-pages${navHovered ? ' App-pages--nav-hover' : ''}`}>
           {pages.map((page, index) => (
             <PageComponent
               key={page.id}
               page={page}
               index={index}
+              pagesCount={pages.length}
               translateX={getTranslateX(index)}
               holeMarginLeft={getHoleMarginLeft(index)}
+              navHovered={navHovered}
+              isActivePage={page.id === activePageId}
               onNavEnter={() => setNavHovered(true)}
               onNavLeave={() => setNavHovered(false)}
             />
@@ -196,28 +199,30 @@ function App() {
         </div>
       </div>
 
-      {pages.length > 0 && (
-        <nav
-          className={`page-nav-popup${navHovered ? ' page-nav-popup--visible' : ''}`}
-          onMouseEnter={() => setNavHovered(true)}
-          onMouseLeave={() => setNavHovered(false)}
-        >
-          {pages.map((item, itemIndex) => (
-            <a
-              key={item.id}
-              href={`#page-${item.id}`}
-              className={item.id === activePageId ? 'page-nav-popup-item active' : 'page-nav-popup-item'}
-              style={{
-                backgroundColor: item.background,
-                ['--item-min-width' as string]: `${(pages.length - itemIndex) * 15}vh`,
-                transitionDelay: `${itemIndex * 0.06}s`,
-              }}
-            >
-              {item.name}
-            </a>
-          ))}
-        </nav>
-      )}
+       {
+       //pages.length > 0 && (
+        // <nav
+        //   className={`page-nav-popup${navHovered ? ' page-nav-popup--visible' : ''}`}
+        //   onMouseEnter={() => setNavHovered(true)}
+        //   onMouseLeave={() => setNavHovered(false)}
+        // >
+        //   {pages.map((item, itemIndex) => (
+        //     <a
+        //       key={item.id}
+        //       href={`#page-${item.id}`}
+        //       className={item.id === activePageId ? 'page-nav-popup-item active' : 'page-nav-popup-item'}
+        //       style={{
+        //         backgroundColor: item.background,
+        //         ['--item-min-width' as string]: `${(pages.length - itemIndex) * 15}vh`,
+        //         transitionDelay: `${itemIndex * 0.06}s`,
+        //       }}
+        //     >
+        //       {item.name}
+        //     </a>
+        //   ))}
+        // </nav>
+      //)
+      }
 
       {pages.length > 1 && (
         <div className="App-scrollbar" aria-hidden="true">
