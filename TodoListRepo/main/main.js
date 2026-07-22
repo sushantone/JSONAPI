@@ -94,13 +94,13 @@ function configureTray() {
     };
   };
 
-  const saveBounds = debounce(() => {
-    store.set('windowBounds', mainWindow.getBounds());
-  }, 500);
+  // const saveBounds = debounce(() => {
+  //   store.set('windowBounds', mainWindow.getBounds());
+  // }, 500);
 
-  mainWindow.on('resize', saveBounds);
-  mainWindow.on('move', saveBounds);
-  mainWindow.on('close', saveBounds);
+  // mainWindow.on('resize', saveBounds);
+  // mainWindow.on('move', saveBounds);
+  // mainWindow.on('close', saveBounds);
 
   app.on('will-quit', () => {
     globalShortcut.unregisterAll();
@@ -114,18 +114,19 @@ function createWindow() {
 
   const { width, height } = screen.getPrimaryDisplay().workAreaSize;
   const winWidth = Math.floor(width / 3);
-  const winHeight = Math.floor(height / 3);
+  const winHeight = Math.floor(height);
 
-  const savedBounds = store.get('windowBounds') ||
+  const savedBounds = //store.get('windowBounds') ||
   {
-    x: width - winWidth - 10,
-    y: height - winHeight - 10,
+    x: width - winWidth -5,
+    y: 0,
     width: winWidth,
-    height: winHeight
+    height: winHeight -5
   };
 
   mainWindow = new BrowserWindow({
     ...savedBounds,
+    roundedCorners:false,
     frame: false,
     alwaysOnTop: false,
     resizable: true,
