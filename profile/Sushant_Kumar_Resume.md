@@ -5,7 +5,7 @@
 
 ## Summary
 
-Architect and hands-on engineer with **21+ years** delivering end-to-end software—from discovery and design through build, test, and production. Deep experience across **investment banking (10 years)** and **multi-domain enterprise delivery (12 years)**, with **12+ years** in solution architecture and **16+ years** in Agile (Scrum, XP, Kanban).
+Architect and hands-on engineer with **23+ years** delivering end-to-end software—from discovery and design through build, test, and production. Deep experience across **investment banking (10 years)** and **multi-domain enterprise delivery (12 years)**, with **12+ years** in solution architecture and **16+ years** in Agile (Scrum, XP, Kanban).
 
 Known for translating complex business problems into scalable systems: microservices, event-driven integrations, cloud-native platforms, and **GenAI-powered developer tooling**. Comfortable leading as architect, track lead, or team lead; equally effective mentoring engineers, running POCs, and shipping production code.
 
@@ -19,18 +19,18 @@ Onsite delivery experience across **US (Washington, New Jersy, Virginia, Okhlaho
 
 | Domain | Technologies |
 | ------ | ------------ |
-| **Generative AI & Agentic Systems** | `Azure OpenAI` · `Azure AI Foundry` · `OpenAI API` · `GPT-4o` · `Claude` · `Gemini` · `Ollama` · `Llama` · `vLLM` · `Hugging Face` · `LangChain` · `LangGraph` · `LangFlow` · `Semantic Kernel` · `MCP` · `A2A` · `Agentic AI` · `RAG` · `Embeddings` · `Prompt Engineering` · `LLMOps` |
+| **Generative AI & Agentic Systems** | `Azure OpenAI` · `GPT-4o` · `Claude` · `Gemini` · `Ollama` · `Llama` · `Hugging Face` · `LangChain` · `LangGraph` · `LangFlow` · `MCP` · `A2A` · `Agentic AI` · `RAG` · `Embeddings` · `Prompt Engineering` · `LLMOps` |
 | **AI Engineering & Developer Productivity** | `Cursor` · `GitHub Copilot` · `VS Code Extensions` · `tree-sitter` · `ANTLR` · `AST Parsing` · `AI-Assisted Migration` · `AI Code Review` · `Spec-Driven Development` |
-| **Intelligent Search, Speech & Multimodal AI** | `pgvector` · `Milvus` · `ChromaDB` · `Pinecone` · `Redis Vector Search` · `Semantic Search` · `Hybrid Retrieval` · `Azure Cognitive Speech` · `Google Cloud Speech` · `Whisper` · `STT` · `TTS` · `FFmpeg` · `Sentiment Analysis` · `Translation Pipelines` |
-| **Cloud-Native & Platform Engineering** | `Azure Functions` · `Container Apps` · `AKS` · `Logic Apps` · `API Management` · `Blob` · `Cosmos DB` · `AWS Lambda` · `S3` · `ECS` · `Docker` · `Kubernetes` · `Helm` · `Knative` · `Dapr` · `Terraform` · `Bicep` · `Multi-Cloud` · `Serverless` |
-| **Event-Driven & Enterprise Integration** | `Kafka` · `RabbitMQ` · `Azure Service Bus` · `Event Hubs` · `Event-Driven Architecture` · `Microservices` · `Salesforce` · `SFTP` · `Ansible` · `BizTalk` (migration) · `iPaaS Patterns` |
-| **Modern Application Stack** | `Python` · `FastAPI` · `Flask` · `Pydantic` · `uvicorn` · `C#` · `.NET Core` · `.NET Framework` · `Node.js` · `TypeScript` · `REST` · `GraphQL` · `gRPC` · `SignalR` · `React` · `Next.js` · `Angular` · `Vite` · `Hangfire` · `Entity Framework Core` · `Dapper` |
-| **Data Platforms & Analytics** | `PostgreSQL` · `SQL Server` · `MongoDB` · `Redis` · `Teradata` · `Elasticsearch` · `OpenSearch` · `SSIS` · `SSRS` · `Power BI` · `Tableau` · `Data Pipelines` |
-| **DevSecOps & Continuous Delivery** | `Azure DevOps` · `GitHub Actions` · `Jenkins` · `Git` · `GitOps` · `Blue-Green Deployments` · `Canary Releases` · `Infrastructure as Code` · `Shift-Left Security` · `SAST` · `DAST` · `SCA` · `SonarQube` · `Dependency Scanning` |
-| **Security, Identity & AI Governance** | `Keycloak` · `Azure Entra ID` · `OAuth2` · `OIDC` · `SAML` · `JWT` · `RBAC` · `ABAC` · `Azure Key Vault` · `HashiCorp Vault` · `Secrets Management` · `mTLS` · `TLS/SSL` · `API Security` · `WAF` · `Zero Trust` · `OWASP Top 10` · `PII & Data Privacy` · `Encryption at Rest & in Transit` · `Prompt Injection Mitigation` · `Content Safety Filters` · `Responsible AI` · `Audit Logging` · `Tenant Isolation` |
-| **Observability & Site Reliability Engineering** | `OpenTelemetry` · `Prometheus` · `Grafana` · `Azure Monitor` · `Application Insights` · `Log Analytics` · `ELK Stack` · `Loki` · `Jaeger` · `Zipkin` · `CloudWatch` · `Distributed Tracing` · `Structured Logging` · `Serilog` · `APM` · `SLO/SLI` · `Error Budgets` · `Alerting` · `Health Checks` |
-| **Quality Engineering & Test Automation** | `PyTest` · `Jest` · `Playwright` · `xUnit` · `NUnit` · `SpecFlow` · `Selenium` · `TDD` · `BDD` · `Contract Testing` · `Security Testing` · `Performance Testing` |
-| **Architecture Patterns & Practices** | `Solution Architecture` · `Clean Architecture` · `Domain-Driven Design` · `CQRS` · `MediatR` · `Service Fabric` · `Multi-Tenant SaaS` · `API-First Design` · `NFR Engineering` · `Technical Debt Reduction` |
+| **Intelligent Search, Speech & Multimodal AI** | `pgvector` · `Milvus` · `ChromaDB` · `Redis Vector Search` · `Semantic Search` · `Hybrid Retrieval` · `Azure Cognitive Speech` · `Google Cloud Speech` · `Whisper` · `STT` · `TTS` · `FFmpeg` · `Sentiment Analysis` · `Translation Pipelines` |
+| **Cloud-Native & Platform Engineering** | `Azure Functions` · `Container Apps` · `AKS` · `Logic Apps` · `API Management` · `Blob` · `Cosmos DB` · `AWS Lambda` · `S3` · `ECS` · `Docker` · `Kubernetes` · `Helm` · `Knative` · `Dapr` · `Terraform` · `Multi-Cloud` · `Serverless` |
+| **Event-Driven & Enterprise Integration** | `Kafka` · `RabbitMQ` · `Azure Service Bus` · `Event Hubs` · `Event-Driven Architecture` · `Microservices` · `Salesforce` · `SFTP` · `Ansible` · `BizTalk` (migration) |
+| **Modern Application Stack** | `Python` · `FastAPI` · `Flask` · `Pydantic` · `uvicorn` · `C#` · `.NET Core` · `.NET Framework` · `Node.js` · `TypeScript` · `REST` · `GraphQL` · `SignalR` · `React` · `Next.js` · `Angular` · `Hangfire` · `Entity Framework Core` · `Dapper` |
+| **Data Platforms & Analytics** | `PostgreSQL` · `SQL Server` · `MongoDB` · `Redis` · `OpenSearch` · `SSIS` · `SSRS` · `Power BI` · `Tableau`  |
+| **DevSecOps & Continuous Delivery** | `Azure DevOps` · `GitHub Actions` · `Jenkins` · `Git` · `GitOps` · `Blue-Green Deployments` · `Shift-Left Security` · `SAST` · `DAST` · `SCA` · `SonarQube` · `Dependency Scanning` |
+| **Security, Identity & AI Governance** | `Keycloak` · `Azure Entra ID` · `OAuth2` · `OIDC` · `SAML` · `JWT` · `RBAC` · `Azure Key Vault` ·  `Secrets Management` · `TLS/SSL` · `API Security` · `WAF` · `Zero Trust` · `OWASP Top 10` · `PII & Data Privacy` · `Encryption at Rest & in Transit` · `Prompt Injection Mitigation` · `Content Safety Filters` · `Responsible AI` · `Audit Logging` · `Tenant Isolation` |
+| **Observability & Site Reliability Engineering** | `OpenTelemetry` · `Grafana` · `Azure Monitor` · `Application Insights` · `Log Analytics` · `ELK Stack` · `Distributed Tracing` · `Structured Logging` · `Serilog` · `APM` · `Alerting` · `Health Checks` |
+| **Quality Engineering & Test Automation** | `PyTest` · `Jest` · `xUnit` · `NUnit` · `SpecFlow` · `Selenium` · `TDD` · `BDD` · `Contract Testing` · `Security Testing` · `Performance Testing` |
+| **Architecture Patterns & Practices** | `Solution Architecture` · `Clean Architecture` · `Domain-Driven Design` · `CQRS` · `Service Fabric` · `Multi-Tenant SaaS` · `API-First Design` · `NFR Engineering` · `Technical Debt Reduction` |
 
 ---
 
@@ -111,13 +111,21 @@ Duration: **Jul 2010 – Dec 2011**
 
 Led technical delivery, architecture decisions, and team coordination across enterprise client engagements.
 
-### HyTech Professionals
+### HyTech Professionals · Noida, India
 
 Role: **Software Engineer / Project Manager** 
 
 Duration: **Nov 2004 – Jul 2010**
 
 Full-stack development and project management across varied client projects; foundation in .NET, SQL Server, and Agile delivery practices.
+
+### Q2A Solutions · Delhi, India
+
+Role: **Software Analyst** 
+
+Duration: **Sept 2002 – Nov 2004**
+
+Full stack developer in ASP & VB6, HTML CSS.
 
 ---
 

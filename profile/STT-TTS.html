@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Web Speech API Demo</title>
+</head>
+<body>
+  <h2>Speech-to-Text (STT)</h2>
+  <button id="startBtn">🎤 Start Speaking</button>
+  <p><strong>Recognized Text:</strong> <span id="output"></span></p>
+
+  <h2>Text-to-Speech (TTS)</h2>
+  <textarea id="ttsInput" rows="3" cols="40">Hello, this is a demo of text-to-speech!</textarea><br>
+  <button id="speakBtn">🔊 Speak Text</button>
+
+  <script>
+    // --- Speech-to-Text ---
+    const startBtn = document.getElementById('startBtn');
+    const output = document.getElementById('output');
+
+    let recognition;
+    if ('webkitSpeechRecognition' in window) {
+      recognition = new webkitSpeechRecognition();
+    } else if ('SpeechRecognition' in window) {
+      recognition = new SpeechRecognition();
+    }
+
+    if (recognition) {
+      recognition.continuous = false;
+      recognition.interimResults = false;
+      recognition.lang = 'en-US';
+
+      recognition.onresult = (event) => {
+        const transcript = event.results[0][0].transcript;
+        output.textContent = transcript;
+      };
+
+      recognition.onerror = (event) => {
+        console.error('Speech recognition error:', event.error);
+      };
+
+      startBtn.onclick = () => recognition.start();
+    } else {
+      startBtn.disabled = true;
+      output.textContent = "SpeechRecognition not supported in this browser.";
+    }
+
+    // --- Text-to-Speech ---
+    const speakBtn = document.getElementById('speakBtn');
+    const ttsInput = document.getElementById('ttsInput');
+
+    speakBtn.onclick = () => {
+      const utterance = new SpeechSynthesisUtterance(ttsInput.value);
+      utterance.lang = 'en-US';
+      speechSynthesis.speak(utterance);
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+{
+  "name": "ms-todo-tray-app",
+  "version": "1.0.0",
+  "main": "main/main.js",
+  "scripts": {
+    "start": "concurrently \"npm run electron\" \"npm run react\"",
+    "react": "react-scripts start",
+    "electron": "wait-on http://localhost:3000 && electron .",
+    "build": "react-scripts build",
+    "dist": "electron-builder"
+  },
+  "dependencies": {
+    "@azure/msal-browser": "^3.0.0",
+    "dotenv": "^17.2.2",
+    "electron": "^25.0.0",
+    "electron-store": "^11.0.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-scripts": "^5.0.1"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "electron-builder": "^24.0.0",
+    "wait-on": "^6.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
